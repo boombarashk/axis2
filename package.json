@@ -1,0 +1,11 @@
+{
+  "name": "calcanddraw",
+  "version": "0.0.1",
+  "description": "Calculate by task and draw axies",
+  "author": "kaboom",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
