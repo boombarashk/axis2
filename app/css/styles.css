@@ -19,6 +19,36 @@ body {
 	height: 100%;
 	background: #fff;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.js-vhidden {
+	visibility: hidden
+}
+.metamorphosis {
+	border: transparent
+}
+.term {
+	outline:none;
+	width:16px;
+	height:20px;
+	padding:2px;
+	border-radius:4px;
+	text-align:center;
+}
+.term.error {
+	color: red;
+}
+.term:disabled {
+	background: transparent;
+}
+.term::placeholder{
+	font-size:1em;
+	color:#000;
+}
 #CalcAndDraw {
 	margin-left: auto;
 	margin-right: auto;
@@ -26,7 +56,54 @@ body {
 	text-align: center;
 }
 #scale {
+	position:relative;
+	margin:0 auto;
 	height: 83px;
 	background: url(../img/sprite.png) center bottom no-repeat transparent;
 	/* gradient from #fff9d1 to #f7eacd */
+	width:875px;
 }
+/* todo good */
+#formula span {
+	display:inline-block;
+	padding:2px;
+	border-radius: 2px;
+}
+#formula span.error {
+	background-color:#ffc800;
+}
+#formula {
+	height:64px;
+}
+#formula .term {
+	font-size:1em;
+	width:24px;
+}
+.number6, .number7, .number8, .number9, .number10, .number11, .number12, .number13, .number14 {
+	position:absolute;
+	height:2px;
+	background: transparent;
+	left:35px;
+}
+.number6:after, .number7:after, .number8:after, .number9:after, .number10:after, .number11:after, .number12:after, .number13:after, .number14:after{
+	position:absolute;
+	content:'\2798';
+	color: orangered;
+	top:3px;
+	right:0;
+	font-size:20px;
+	/*width:0;
+	height:0;*/
+}
+.number6{
+	/*left:20px;*/
+	width:235px;
+}
+.number7 {width: 274px;}
+.number8 {width: 313px;}
+.number9 {width: 352px;}
+.number10{width: 390px;}
+.number11{width: 430px;}
+.number12{width: 469px;}
+.number13{width: 508px;}
+.number14{width: 547px;}
