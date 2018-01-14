@@ -58,10 +58,16 @@ input::-webkit-inner-spin-button {
 #scale {
 	position:relative;
 	margin:0 auto;
-	height: 83px;
+	height: 85px;
 	background: url(../img/sprite.png) center bottom no-repeat transparent;
 	/* gradient from #fff9d1 to #f7eacd */
 	width:875px;
+}
+#scale .term {
+	position: absolute;
+	margin-top:-34px;
+	margin-left:47%;
+	z-index:2;
 }
 /* todo good */
 #formula span {
@@ -73,7 +79,7 @@ input::-webkit-inner-spin-button {
 	background-color:#ffc800;
 }
 #formula {
-	height:64px;
+	height:123px;
 }
 #formula .term {
 	font-size:1em;
@@ -81,29 +87,34 @@ input::-webkit-inner-spin-button {
 }
 .number6, .number7, .number8, .number9, .number10, .number11, .number12, .number13, .number14 {
 	position:absolute;
-	height:2px;
 	background: transparent;
+	/*height:1px;*/
 	left:35px;
 }
-.number6:after, .number7:after, .number8:after, .number9:after, .number10:after, .number11:after, .number12:after, .number13:after, .number14:after{
+.no-svg .number6:after, .no-svg .number7:after, .no-svg .number8:after, .no-svg .number9:after, .no-svg .number10:after, .no-svg .number11:after, .no-svg .number12:after, .no-svg .number13:after, .no-svg .number14:after{
 	position:absolute;
 	content:'\2798';
-	color: orangered;
+	color: #da2f59;
 	top:3px;
 	right:0;
 	font-size:20px;
-	/*width:0;
-	height:0;*/
+	/*transform: rotate(36deg);*/
 }
 .number6{
 	/*left:20px;*/
 	width:235px;
 }
 .number7 {width: 274px;}
-.number8 {width: 313px;}
+.number8 {width: 310px;}
 .number9 {width: 352px;}
 .number10{width: 390px;}
 .number11{width: 430px;}
 .number12{width: 469px;}
-.number13{width: 508px;}
+.number13{width: 506px;}
 .number14{width: 547px;}
+
+.halfclip {
+	stroke:#da2f59;
+	fill:transparent;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 49%, 0% 49%)
+}
