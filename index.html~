@@ -5,6 +5,7 @@
 	<!--<script src="./app/js/calcanddraw.js"></script>-->
 	<script src="./app/js/scripts.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./app/css/styles.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="./app/css/styles.css"> -->
 </head>
 <body>
   	<div id="CalcAndDraw"></div>
